@@ -17,8 +17,12 @@ public class DemoProjectApplication implements CommandLineRunner {
 
 	//Autowired annotation will inform the framework that this object should be
 	//injected where ever it is required
+	//@Autowired
+    //Apple obj;
+
+
 	@Autowired
-	Apple obj;
+	DBService dbService;
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoProjectApplication.class, args);
@@ -27,7 +31,12 @@ public class DemoProjectApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-		obj.eatApple();
+		//obj.eatApple();
+
+
+		System.out.println(dbService.getData());
+
+
 
 	}
 
